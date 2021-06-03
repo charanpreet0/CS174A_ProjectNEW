@@ -1,0 +1,221 @@
+ADMINISTRATOR (MANAGER/employees)
+Name,username,password,Address,STATE,Phone,email,TAXID,SSN
+John Admin,admin,secret,Stock Company SB,CA,(805)6374632,admin@stock.com,1000,606-60-6060
+-----
+CUSTOMER
+name,state,email_address,tax_ID_num,password,username,address,phone,SSN
+Alfred Hitchcock,CA,alfred@hotmail.com,1022,hi,alfred,6667 El Colegio #40 SB,(805)2574499,606-76-7900
+Billy Clinton,CA,billy@yahoo.com,3045,cl,billy,5777 Hollister SB,(805)5629999,606-76-7903
+Cindy Laugher,CA,cindy@hotmail.com,2034,la,cindy,7000 Hollister SB,(805)6930011,606-70-7900
+David Copperfill,CA,david@yahoo.com,4093,co,david,1357 State St SB,(805)8240011,506-78-7900
+Elizabeth Sailor,CA,sailor@hotmail.com,1234,sa,sailor,4321 State St SB,(805)1234567,436-76-7900
+George Brush,CA,george@hotmail.com,8956,br,brush,5346 Foothill Av,(805)1357999,632-45-7900
+Ivan Stock,NJ,ivan@yahoo.com,2341,st,ivan,1235 Johnson Dr,(805)3223243,609-23-7900
+Joe Pepsi,CA,pepsi@pepsi.com,0456,pe,joe,3210 State St,(805)5668123,646-76-3430
+Magic Jordon,NJ,jordon@jordon.org,3455,jo,magic,3852 Court Rd,(805)4535539,646-76-8843
+Olive Stoner,CA,olive@yahoo.com,1123,st,olive,6689 El Colegio #151,(805)2574499,645-34-7900
+Frank Olson,CA,frank@gmail.com,3306,ol,frank,6910 Whittier Dr,(805)3456789,345-23-2134
+-----
+MOVIES
+movieID,title,production_year,genre,ranking,revenue
+2606,L.A. Confidential,1997,Action,7.8,842
+0421,A Perfect Murder,1998,Thriller,8.4,1230
+7612,Jerry Maguire,1996,Comedy,6.3,183
+-----
+ACTOR_DIRECTOR
+name,three_letter_symbol,dob
+Kim Basinger,SKB,8 December 1958
+Michael Douglas,SMD,25 September 1944
+Tom Cruise,STC,3 July 1962
+-----
+MOVIE_CONTRACT
+movieID,name,total_value,year,role
+2606,Kim Basinger,5000000,1997,Actor
+0421,Michael Douglas,10000000, 1998,Actor
+7612,Tom Cruise,5000000,1996,Actor
+-----
+HAS_STOCK
+name,three_letter_symbol
+Kim Basinger,SKB
+Michael Douglas,SMD
+Tom Cruise, STC
+-----
+HAS_MARKET_ACC
+username,ID_number,date_created,initial_deposit
+alfred,001,3/16/2013
+billy,002,3/16/2013
+cindy,003,3/16/2013
+david,004,3/16/2013
+sailor,005,3/16/2013
+brush,006,3/16/2013
+ivan,007,3/16/2013
+joe,008,3/16/2013
+magic,009,3/16/2013
+olive,010,3/16/2013
+frank,011,3/16/2013
+-----
+HAS_THESE_TRANS
+transaction_id,ID_number
+1,001
+2,002
+3,002
+4,003
+5,004
+6,004
+7,004
+8,005
+9,006
+10,007
+11,008
+12,008
+13,008
+14,009
+15,010
+16,010
+17,010
+18,011
+19,011
+20,011
+-----
+HAS_STOCK_ACC
+username,ID_number
+alfred,001
+billy,002
+cindy,003
+david,004
+sailor,005
+brush,006
+ivan,007
+joe,008
+magic,009
+olive,010
+frank,011
+-----
+IS_STOCK
+three_letter_symbol, ID_number
+SKB,001
+SMD,002
+STC,002
+STC,003
+SKB,004
+SMD,004
+STC,004
+SMD,005
+SKB,006
+SMD,007
+SKB,008
+STC,008
+SMD,008
+SKB,009
+SKB,010
+SMD,010
+STC,010
+SKB,011
+STC,011
+SMD,011
+-----
+BUYING_STOCK
+transaction_id, three_letter_symbol,number_of_sharestobuy
+1,SKB,100
+2,SMD,500
+3,STC,100
+4,STC,250
+5,SKB,100
+6,SMD,500
+7,STC,50
+8,SMD,1000
+9,SKB,100
+10,SMD,300
+11,SKB,500
+12,STC,100
+13,SMD,200
+14,SKB,1000
+15,SKB,100
+16,SMD,100
+17,STC,100
+18,SKB,100
+19,STC,200
+20,SMD,100
+-----
+SELLING_STOCK
+transaction_id, three_letter_symbol
+-----
+ACCOUNT
+ID_number,list_of_transactions
+001,
+002,
+003,
+004,
+005,
+006,
+007,
+008,
+009,
+010,
+011,
+-----
+MARKET_ACC
+ID_number,list_of_transactions,balance
+001,
+002,
+003,
+004,
+005,
+006,
+007,
+008,
+009,
+010,
+011,
+-----
+STOCK_ACC
+ID_number,list_of_transactions,balance_inshares
+001,
+002,
+003,
+004,
+005,
+006,
+007,
+008,
+009,
+010,
+011,
+-----
+STOCKS
+daily_closing_prices, current_price, three_letter_symbol
+-----
+TRANSACTIONS
+transaction_id,date_of_transaction
+1,2013-03-16
+2,2013-03-16
+3,2013-03-16
+4,2013-03-16
+5,2013-03-16
+6,2013-03-16
+7,2013-03-16
+8,2013-03-16
+9,2013-03-16
+10,2013-03-16
+11,2013-03-16
+12,2013-03-16
+13,2013-03-16
+14,2013-03-16
+15,2013-03-16
+16,2013-03-16
+17,2013-03-16
+18,2013-03-16
+19,2013-03-16
+20,2013-03-16
+-----
+ACCRUE_INTEREST
+transaction_id,date_of_transaction
+-----
+WITHDRAW
+transaction_id,date_of_transaction,withdrawal_amount
+-----
+DEPOSITS
+transaction_id,date_of_transaction, money_to_deposit
+-----
+SELL
+transaction_id,date_of_transaction,number_shares,buying_price
