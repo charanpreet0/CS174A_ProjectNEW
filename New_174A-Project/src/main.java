@@ -19,8 +19,8 @@ public class main{
     public static void main(String[] args) {
         // createNewDatabase();
         CreateAndInitTable Table1 = new CreateAndInitTable();
-        // Table1.dropAllTables();
-        // Table1.createNewTable();
+        Table1.dropAllTables();
+        Table1.createNewTable();
         Table1.insertreader();
     }
 }
