@@ -865,13 +865,15 @@ public class CreateAndInitTable {
     public void insertreader() {
         // pass the path to the file as a parameter
         try {
-                File file = new File("C:/New_174A-Project1/Data.txt");
+                // File file = new File("C:/New_174A-Project1/Data.txt"); // charans 
+                File file = new File("Given_Data.txt");
                 Scanner sc = new Scanner(file);
                 while (sc.hasNextLine()) {
                         String Vals = "";
                         String column_names = "";
                         String our_line = sc.nextLine();
                         System.out.println(our_line);
+
                         if (our_line.equals("CUSTOMER")) {
                                 column_names = sc.nextLine();
                                 while(sc.hasNextLine()) {
@@ -881,6 +883,8 @@ public class CreateAndInitTable {
                                      } else {
                                         String [] insert_these = Vals.split(",");
                                         insertToCustomer(insert_these);
+                                        MarketAcc my_markacc = new MarketAcc();
+                                        my_markacc.OpenMarketAcc(insert_these[0], 1001, "03/16/13");
                                      } 
                                 }
                         } else if (our_line.equals("MOVIES")) {
